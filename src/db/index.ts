@@ -3,6 +3,9 @@ import config from "../config";
 
 export const pool = new Pool({
     connectionString: config.connection_string,
+    ssl: {
+        rejectUnauthorized: false 
+    }
 });
 export const initDB = async () => { 
     try {
